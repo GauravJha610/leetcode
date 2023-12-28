@@ -3,7 +3,7 @@ public:
     bool isPalindrome(string s) {
         string ans="";
         for(char i:s){
-            if(iswalnum(i)){
+            if(isalnum(i)){
                 if(isalpha(i)){
                     ans+=tolower(i);
                 }
