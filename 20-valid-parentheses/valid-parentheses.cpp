@@ -4,9 +4,9 @@ public:
         stack<char> stk;
         int n=s.size();
 
-        if(n%2!=0){
-            return false;
-        }
+        // if(n%2!=0){
+        //     return false;
+        // }
 
         for(int i=0;i<n;i++){
             if(s[i]=='(' || s[i]=='{' || s[i]=='['){
@@ -14,7 +14,9 @@ public:
             }
             else if(!stk.empty()){
                 char temp=stk.top();
-                if(  (temp=='(' && s[i]==')')  || (temp=='{' && s[i]=='}')  ||  (temp=='[' && s[i]==']')  ){
+                if(  (temp=='(' && s[i]==')')  
+                || (temp=='{' && s[i]=='}')  
+                ||  (temp=='[' && s[i]==']')  ){
                     stk.pop();
                 }
                 else{
