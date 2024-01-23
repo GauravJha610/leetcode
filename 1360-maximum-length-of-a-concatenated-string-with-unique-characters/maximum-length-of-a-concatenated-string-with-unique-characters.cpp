@@ -28,9 +28,10 @@ public:
             if (m > max_len) {
                 max_len = m;
             }
+            solve(arr, n, i + 1, s);
         }
 
-        solve(arr, n, i + 1, s);
+        
     }
 
     int maxLength(vector<string>& arr) {
